@@ -10,10 +10,21 @@
   </head>
 
   <body>
-
+   <nav>
+<a href="/">Home</a>
+{{#unless isLoggedIn }}
+<a href="/signup">Sign Up</a>
+<a href="/login">Log in</a>
+{{/unless}}
+<a href = "/private">Private</a>
+<a href="/profile">Profile</a>
+<form action = "/logout"  method="post">
+<button>LOGOUT</button>
+</form>
+    </nav>
     {{{body}}}
 
-    <script src="/js/script.js"></script>
+<script src="/js/script.js"></script>
   </body>
 
 </html>
